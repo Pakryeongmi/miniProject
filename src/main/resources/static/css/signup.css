@@ -1,0 +1,53 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin-bottom:5%
+  }
+
+.head {
+    text-align: center;
+    font-family:'Gugi';
+    font-size:40px;
+}
+
+.sign {
+    height: 50%;
+    width: 50%;
+    font-size: 30px;
+    display:block;
+    margin:auto;
+    font-family: 'Jua';
+    border:solid 3px;
+    border-radius:20px;
+    padding-left:30px;
+    padding-right:30px;
+    padding-top:30px;
+    padding-bottom:20px;
+    border-color: lightgray;
+    margin-top:50px;
+}
+
+.sign input {
+    width:550px;
+    height:50px;
+    text-align: center;
+    margin-left:30px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.sign select {
+    width:80px;
+    height:40px;
+    margin-left:30px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+button {
+    display:block;
+    margin:auto;
+    width:100px;
+    height:35px;
+    margin-top:40px;
+}

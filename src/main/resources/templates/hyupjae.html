@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a4ab028ddc.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Gugi&family=Jua&family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/woodo.css">
+    <title>협재해수욕장</title>
+</head>
+<body>
+    <div class="menu">
+        <input type="checkbox" id="menuicon">
+        <label for="menuicon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-ferry"></i>
+                <p>&nbsp; JeJu Island</p>
+            </div><hr>
+
+            <ul class="mainmenu">
+                <li class="item" id="account">
+                    <a href="#account" class="btn">Place</a>
+                    <div class="subMenu">
+                        <a th:href="@{/menu/hanla}">한라산</a>
+                        <a th:href="@{/menu/seongsanbong}">성산일출봉</a>
+                        <a th:href="@{/menu/chunji}">천지연폭포</a>
+                        <a th:href="@{/menu/hyupjae}">협재해수욕장</a>
+                        <a th:href="@{/menu/osulok}">오셜록</a>
+                        <a th:href="@{/menu/woodo}">우도</a>
+                    </div>
+                </li>
+
+                <li class="item">
+                    <a th:href="@{/review/list}" class="btn">Review</a>
+                </li>
+
+                <li class="item" id="my">
+                    <a href="#my" class="btn">MyInfo</a>
+                    <div class="subMenu">
+                        <a href="#">내가 쓴 리뷰</a>                        
+                        <a href="#">회원 탈퇴</a>
+                    </div>
+                </li>
+            </ul>
+            <label for="menuicon"></label>
+
+            <button type="button" class="logout" th:onClick="|location.href='@{/user/logout}'|">로그아웃</button>
+        </div>
+
+        <div class="icon">
+            <a th:href="@{'/'}"><i class="fa-solid fa-house-user"></i></a>
+        </div>
+    </div>
+
+
+    <div class="head">
+        <div class="image">
+            <img src="/img/hyupjae.png">
+        </div>
+
+        <div class="text">
+        <h1>협재해수욕장</h1>
+        <p>제주도 서쪽에 가볼만한 해수욕장을 꼽으라 하면 단연 1,2위로 꼽아 추천하는 곳이 협재해수욕장이다. 제주시 한림읍에 자리하며, 제주올레 14코스의 일부다. 금능해수욕장과 이웃하고 있는 쌍둥이해수욕장이기도 하다.. </p>
+        </div>
+    </div><hr>
+
+
+    <div class="tab_content">
+        <input type="radio" name="tabmenu" id="tab01" checked>
+        <label for="tab01">TRIP</label>
+        <input type="radio" name="tabmenu" id="tab02">
+        <label for="tab02">FOOD</label>
+        <input type="radio" name="tabmenu" id="tab03">
+        <label for="tab03">CAFE</label>
+
+        
+        <div class="conbox con1">
+            <div class="main1">
+                <div class="image">
+                    <img src="/img/nuun.png">
+                </div>
+        
+                <div class="text">
+                    <h1>누운오름</h1>
+                    <p>소가 누워 있는 모습과 닮았다는 뜻에서 붙여진 누운 오름은 눈 오름이라고도 하며, 그리 높지 않아 쉽게 오를 수 있다. 누운 오름에는 큰 굼부리가 있는데 그 곳은 소 목장으로 사용되고 있다.</p>
+                </div>
+            </div>
+        
+        
+            <div class="main2">
+                <div class="image">
+                    <img src="/img/saesimool.png">
+                </div>
+        
+                <div class="text">
+                    <h1>새시물</h1>
+                    <p>화려하고 역동적이지 않아도 지도에도 나오지 않는 조용한 골목을 걷다가 잠시 쉬어 갈 수 있는 곳. 상명리 정류소부터 상명리동동 정류장까지 이어진 상명북2길을 천천히 걷다 보면 새시물을 찾을 수 있다. 과거 암석 위 높은 지대에서도 물이 마르지 않아 주민들의 식수로 쓰였지만 현재는 정자가 만들어져 쉼터의 역할을 하고 있다.
+
+                    </p>
+                </div>
+            </div>
+        
+            <div class="main3">
+                <div class="image">
+                    <img src="/img/spa.png">
+                </div>
+        
+                <div class="text">
+                    <h1>바릇스파</h1>
+                    <p>사람들은 보통 떠오르는 일출 앞에 서면 소망을 빌거나 앞으로의 각오를 다짐하고는 한다. 반면에 붉은 노을을 바라볼 때는 평소 일상에 지쳐있던 긴장을 내려놓고 분위기에 취한다. 제주시 애월읍 신엄리 신엄포구 앞 해안도로는 해질 무렵 드라이브하기 좋은 코스 중 하나. 이곳에 일상생활에 지친 사람들의 마음과 영혼을 잠시 쉬어가게 해 주는 아늑한 공간이 있다.</p>
+                </div>
+
+        
+
+            </div>
+        </div>
+
+        <div class="conbox con2">
+            <div class="main1">
+                <div class="image">
+                    <img src="/img/duriho.png">
+                </div>
+        
+                <div class="text">
+                    <h1>두리호집</h1>
+                    <p>두리호집은 한림항 두리호 선장이 직접 어획한 100% 자연산 제주활어들을 직접 판매하는 자연산 활어 전문점이다.</p>
+                </div>
+            </div>
+        
+        
+            <div class="main2">
+                <div class="image">
+                    <img src="/img/mibun.png">
+                </div>
+        
+                <div class="text">
+                    <h1>미번베트남쌀국수</h1>
+                    <p>제주 속 베트남 손맛을 느낄 수 있는 대성 쌀국수.
+
+                        베트남 등 외국에서 이주해온 주민들이 자주 찾는 곳으로, 현지의 맛이 그리운 이들이 찾아오는 맛집이다. </p>
+                </div>
+            </div>
+        
+            <div class="main3">
+                <div class="image">
+                    <img src="/img/daramji.png">
+                </div>
+        
+                <div class="text">
+                    <h1>다람쥐식탁</h1>
+                    <p>한림의 조용한 주택가에 위치한 다람쥐 식탁은 일본 가정식 식당으로
+                        담백한 색감과 소품을 통해 일본 가정식이라는 단어가 주는 특유의 편안한 분위기를 조성해 놓았다.
+                        먹는 즐거움과 더불어 곳곳에 걸린 그림과 놓인 잡지나 장식품들은 마치 디자인 소품상점에 온 것 같다. </p>
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="conbox con3">
+            <div class="main1">
+                <div class="image">
+                    <img src="/img/cafepyo.png">
+                </div>
+        
+                <div class="text">
+                    <h1>카페쉼표</h1>
+                    <p>총 3개의 층으로 이루어져있다. 루프탑에서 바라보는 협재해수욕장 풍경이 아름다워 3층 자리가 인기가 좋다.
+                        이곳의 대표 메뉴는 얼린 고구마를 갈아 토핑으로 오메기떡을 올린 오메기 감저빙수다.</p>
+                </div>
+            </div>
+        
+        
+            <div class="main2">
+                <div class="image">
+                    <img src="/img/oz.png">
+                </div>
+        
+                <div class="text">
+                    <h1>키친오즈</h1>
+                    <p>몽환적인 느낌의 서양억새-핑크뮬리로 유명한 곳이다. 가을이면 분홍색으로 넘실거리는 억새밭을 보기위해 많은 관광객들이 찾고 있다. 들어서면 큰 애완견이 있는 애완동반 가능 카페다. 파스타가 주 메뉴이고 음료도 판매한다. </p>
+                </div>
+            </div>
+        
+            <div class="main3">
+                <div class="image">
+                    <img src="/img/house.png">
+                </div>
+        
+                <div class="text">
+                    <h1>하우스레서피</h1>
+                    <p>하우스레서피는 애월에서 한림으로 넘어가는 길목에 위치하였다.
+                        미국에서 오래 살다 온 부부가 제주에 정착하고 오픈한 가게인데, 맛있는 당근케이크 하나로 유명해졌다.
+                        당근 재배에 잘 맞는 제주 흙 덕분에 질 좋은 당근으로 만든 케이크 안에 풍미가 좋은 크림치즈까지 들어있다.</p>
+        
+        </div>
+    </div>
+
+</body>
+</html>

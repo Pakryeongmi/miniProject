@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a4ab028ddc.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Gugi&family=Jua&family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/woodo.css">
+    <title>성산봉</title>
+</head>
+<body>
+<div class="menu">
+    <input type="checkbox" id="menuicon">
+    <label for="menuicon">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <div class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-ferry"></i>
+            <p>&nbsp; JeJu Island</p>
+        </div><hr>
+
+        <ul class="mainmenu">
+            <li class="item" id="account">
+                <a href="#account" class="btn">Place</a>
+                <div class="subMenu">
+                    <a th:href="@{/menu/hanla}">한라b산</a>
+                    <a th:href="@{/menu/seongsanong}">성산일출봉</a>
+                    <a th:href="@{/menu/chunji}">천지연폭포</a>
+                    <a th:href="@{/menu/hyupjae}">협재해수욕장</a>
+                    <a th:href="@{/menu/osulok}">오셜록</a>
+                    <a th:href="@{/menu/woodo}">우도</a>
+                </div>
+            </li>
+
+            <li class="item">
+                <a th:href="@{/review/list}" class="btn">Review</a>
+            </li>
+
+            <li class="item" id="my">
+                <a href="#my" class="btn">MyInfo</a>
+                <div class="subMenu">
+                    <a href="#">내가 쓴 리뷰</a>
+                    <a href="#">회원 탈퇴</a>
+                </div>
+            </li>
+        </ul>
+        <label for="menuicon"></label>
+
+        <button type="button" class="logout" th:onClick="|location.href='@{/user/logout}'|">로그아웃</button>
+    </div>
+
+    <div class="icon">
+        <a th:href="@{'/'}"><i class="fa-solid fa-house-user"></i></a>
+    </div>
+</div>
+
+
+<div class="head">
+    <div class="image">
+        <img src="/img/seongsanbong.png">
+    </div>
+
+    <div class="text">
+        <h1>성산일출봉</h1>
+        <p>성산일출봉은 제주도의 다른 오름들과는 달리 마그마가 물속에서 분출하면서 만들어진 수성화산체다. 화산활동시 분출된 뜨거운 마그마가 차가운 바닷물과 만나면서 화산재가 습기를 많이 머금어 끈끈한 성질을 띄게 되었고, 이것이 층을 이루면서 쌓인 것이 성산일출봉이다. </p>
+    </div>
+</div><hr>
+
+
+<div class="tab_content">
+    <input type="radio" name="tabmenu" id="tab01" checked>
+    <label for="tab01">TRIP</label>
+    <input type="radio" name="tabmenu" id="tab02">
+    <label for="tab02">FOOD</label>
+    <input type="radio" name="tabmenu" id="tab03">
+    <label for="tab03">CAFE</label>
+
+
+    <div class="conbox con1">
+        <div class="main1">
+            <div class="image">
+                <img src="/img/redorm.png">
+            </div>
+
+            <div class="text">
+                <h1>붉은오름</h1>
+                <p>산 옆구리에 그것도 말굽형이 패어 내리는 중턱에 원형이 들어앉은 특이한 복합형 화구를 가지고 있다. 섭지코지 옆에 위치해 있는데 오름 전체가 붉은 송이 또는 화산석으로 형성되어 붉게 보이는 데서 붉은 오름, 이를 한자로 적악(赤岳)이라 한다.</p>
+            </div>
+        </div>
+
+
+        <div class="main2">
+            <div class="image">
+                <img src="/img/daesoosanbong.png">
+            </div>
+
+            <div class="text">
+                <h1>대수산봉</h1>
+                <p>성산읍사무소 뒤편에 위치한 오름으로, 일주도로 성산읍사무소 남쪽 신양리 입구 반대편으로 농로가 오름 기슭까지 시멘트포장길이 나 있어 쉽게 접근할 수 있다. </p>
+            </div>
+        </div>
+
+        <div class="main3">
+            <div class="image">
+                <img src="/img/eunpyeongri.png">
+            </div>
+
+            <div class="text">
+                <h1>은평리 포구</h1>
+                <p>제주올레 2코스는 성산의 광치기 해변을 시작으로 다양하고 색다른 매력적인 길들을 따라 걷는 코스이다. 그런 매력적인 코스의 종점이 바로 온평포구이다.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="conbox con2">
+        <div class="main1">
+            <div class="image">
+                <img src="/img/sorahouse.png">
+            </div>
+
+            <div class="text">
+                <h1>소라네집</h1>
+                <p>메인 메뉴인 전복죽은 당일 채취한 자연산 전복을 다듬어 요리하는데
+                    밑반찬과 싱싱한 야채들 역시 직접 재배하여 키운 재료를 사용한다.
+                    그 외에도 문어, 생새우, 소라 등의 다양한 해산물을 맛볼 수 있다.
+                    소라는 삶아서 나오기도 하고 회로 먹을수도 있다.</p>
+            </div>
+        </div>
+
+
+        <div class="main2">
+            <div class="image">
+                <img src="/img/roynmay.png">
+            </div>
+
+            <div class="text">
+                <h1>로이앤메이</h1>
+                <p>섭지코지에서 멀지 않은 로이앤메이는 런던 유학 중에 만난 한국인 아내와 중국인 남편이 운영하는 중국 가정식 전문점이다.
+                    자신이 어릴 적 먹었던 음식을 사람들과 나누고 싶은 남편 로이의 바람과 그의 요리를 좋아하는 아내 메이의 마음이 이곳에 담겨 있다.
+                    로이앤메이는 테이블 4개가 전부인 아담한 공간이지만 음식들은 하나같이 특별하다.
+                    부부가 집에서 즐겨 먹는 음식을 하나씩 메뉴로 만들어 이집만의 특별한 요리로 탄생시켰기 때문이다. </p>
+            </div>
+        </div>
+
+        <div class="main3">
+            <div class="image">
+                <img src="/img/jjong.png">
+            </div>
+
+            <div class="text">
+                <h1>쫑이네해산물</h1>
+                <p>쫑이네 해산물의 대표 메뉴로는 보말로 요리한 보말라면, 보말국, 보말죽과 소라내장볶음밥, 해물라면 등이 있으며,
+                    구이류로 고등어구이와 옥돔구이를 취급하는 등 메뉴가 다양하기 때문에
+                    여러 재료를 이용한 다양한 맛의 음식을 맛 볼 수 있다. </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="conbox con3">
+        <div class="main1">
+            <div class="image">
+                <img src="/img/flowercafe.png">
+            </div>
+
+            <div class="text">
+                <h1>꽃담팥집카페</h1>
+                <p>집주위를 낮게 둘러싼 겹담 위에 사철 꽃이 핍니다.
+                    그래서 꽃담이고 팥을 중심으로 한 브런치가 주메뉴라 팥집입니다.
+                    제주고유의 오메기떡에 로컬식자재를 사용하여 생과일오메기떡을 만들었고,
+                    가마솥에 정성들여 쑤은 달지않은 팥죽과일출봉의 꿈을 담은 빙수,
+                    해뜨기 전부터 준비하는 아침밥 전복죽씨
+                    그리고 돌담옆에 피는 구철초로 꽃차를 만들었습니다.</p>
+            </div>
+        </div>
+
+
+        <div class="main2">
+            <div class="image">
+                <img src="/img/ajulreju.png">
+            </div>
+
+            <div class="text">
+                <h1>아줄레주</h1>
+                <p>생소한 이름의 ‘아줄레주’는 본래 포르투갈어로 타일이라는 의미를 가지고 있다.
+                    이름에 걸맞게 카페 입구 양옆은 타일로 장식되어 이국적인 느낌을 준다.
+                    네 종류의 따뜻한 커피와 아이스커피가 있으며 대표 메뉴로는 제주의 제철 과일을 이용한 아이스티와 에이드가 있다.
+                    음료를 제외한 디저트로는 포르투갈에서 즐겨먹는 에그타르트를 판매하고 있다.</p>
+            </div>
+        </div>
+
+        <div class="main3">
+            <div class="image">
+                <img src="/img/intheojo.png">
+            </div>
+
+            <div class="text">
+                <h1>인더오조</h1>
+                <p>인더오조의 수제케이크는 100%국내산 동물성 크림과 우유버터, 신선한 제철과일을 사용하여 만든다. 제주산 유기농으로 늦봄그늘에서 채취한 말차 어린잎만을 사용하여 색감이 진한 녹색이고 맛도 진하다. 주문시 달달한 정도를 조절 가능하므로 취향에 따라 주문하면 된다. </p>
+
+            </div>
+        </div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/a4ab028ddc.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Gamja+Flower&family=Gugi&family=Jua&family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/signup.css"/>
+  <title>회원 가입</title>
+</head>
+<body>
+<div class="head">
+  <h1>회원 가입</h1>
+</div><hr>
+
+<div class="sign">
+  <form th:action="@{/user/signup}" method="post">
+    아이디:
+    <input type="email" name="userName" placeholder="이메일 입력해주세요"><br><hr>
+    비밀번호 :
+    <input type="password" name="passWord" placeholder="비밀번호"><br><hr>
+    이름 :
+    <input type="text" name="realName" placeholder="성함을 입력해주세요"><br><hr>
+    별명 :
+    <input type="text" name="nickName" placeholder="별명을 입력해주세요"><br><hr>
+    성별 :
+    <select name="sex" placeholder="성별을 골라주세요">
+      <option value="">성별</option>
+      <option value="남자">남자</option>
+      <option value="여자">여자</option>
+    </select><br><hr>
+    나이 :
+    <input type="number" name="age" placeholder="나이를 입력해주세요"><br>
+    <button type="submit" th:onClick="|location.href='@{/user/login}'|">가입하기</button>
+  </form>
+</div>
+</body>
+</html>

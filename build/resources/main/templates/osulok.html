@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a4ab028ddc.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Gugi&family=Jua&family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/woodo.css">
+    <title>오설록티뮤지엄</title>
+</head>
+<body>
+    <div class="menu">
+        <input type="checkbox" id="menuicon">
+        <label for="menuicon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-ferry"></i>
+                <p>&nbsp; JeJu Island</p>
+            </div><hr>
+
+            <ul class="mainmenu">
+                <li class="item" id="account">
+                    <a href="#account" class="btn">Place</a>
+                    <div class="subMenu">
+                        <a th:href="@{/menu/hanla}">한라산</a>
+                        <a th:href="@{/menu/seongsanbong}">성산일출봉</a>
+                        <a th:href="@{/menu/chunji}">천지연폭포</a>
+                        <a th:href="@{/menu/hyupjae}">협재해수욕장</a>
+                        <a th:href="@{/menu/osulok}">오셜록</a>
+                        <a th:href="@{/menu/woodo}">우도</a>
+                    </div>
+                </li>
+
+                <li class="item">
+                    <a th:href="@{/review/list}" class="btn">Review</a>
+                </li>
+
+                <li class="item" id="my">
+                    <a href="#my" class="btn">MyInfo</a>
+                    <div class="subMenu">
+                        <a href="#">내가 쓴 리뷰</a>                        
+                        <a href="#">회원 탈퇴</a>
+                    </div>
+                </li>
+            </ul>
+            <label for="menuicon"></label>
+
+            <button type="button" class="logout" th:onClick="|location.href='@{/user/logout}'|">로그아웃</button>
+        </div>
+
+        <div class="icon">
+            <a th:href="@{'/'}"><i class="fa-solid fa-house-user"></i></a>
+        </div>
+    </div>
+
+
+    <div class="head">
+        <div class="image">
+            <img src="/img/osulokmain.png">
+        </div>
+
+        <div class="text">
+        <h1>오설록티뮤지엄</h1>
+        <p>2001년 9월 개관한 오설록티뮤지엄은 국내외 차 관련 물품과 박물관이며, 푸른 녹차밭이 펼쳐지는 제주도 서광다원 입구에 위치하고 있다. 동서양 전통과 현대가 조화를 이룬 문화의 공간이자, 자연 친화적인 휴식공간으로, 건물 전체가 녹차잔을 형상화하여 만들어졌다. 녹차와 한국 전통 차 문화를 이해할 수 있는 학습 공간으로 설록차의 모든 것을 체험해 볼 수 있는 곳이다. </p>
+        </div>
+    </div><hr>
+
+
+    <div class="tab_content">
+        <input type="radio" name="tabmenu" id="tab01" checked>
+        <label for="tab01">TRIP</label>
+        <input type="radio" name="tabmenu" id="tab02">
+        <label for="tab02">FOOD</label>
+        <input type="radio" name="tabmenu" id="tab03">
+        <label for="tab03">CAFE</label>
+
+        
+        <div class="conbox con1">
+            <div class="main1">
+                <div class="image">
+                    <img src="/img/dombak.png">
+                </div>
+        
+                <div class="text">
+                    <h1>돔박이오름</h1>
+                    <p>돔박이는 동백나무의 제주어로 동백나무가 많이 자라서 돔박이오름이라고 불렀다는 설과 돔박생이(동박새의 제주어)가 서식했다고 해서 그 이름을 따서 돔박이오름이라고 불렀다는 설이 있다. 오름 주변에는 골프장이 많이 있고 그 사이로 평화로가 있는데 돔박이오름이 세 오름 중에서 도로변과 가장 가깝다.</p>
+                </div>
+            </div>
+        
+        
+            <div class="main2">
+                <div class="image">
+                    <img src="/img/hyunmu.png">
+                </div>
+        
+                <div class="text">
+                    <h1>병악현무암지대</h1>
+                    <p>80만년 지구의 시간을 품은  지질트레일 B코스 중 하나인 산방산을 한바퀴 에둘러 용머리해안 일대가 파노라마로 펼쳐지는 산방산연대를 오르는 코스 중 소금막과 겨욱대 사이에 위치하고있는 주상절리 사이로 아담한 해변을 품고 있는 "병악현무암지대" </p>
+                </div>
+            </div>
+        
+            <div class="main3">
+                <div class="image">
+                    <img src="/img/wonsu.png">
+                </div>
+        
+                <div class="text">
+                    <h1>원수악</h1>
+                    <p>멀리서 보면 두 오름이 길게 가로누운 형체를 띠고 있는데, 이는 감낭오름이 북동쪽 기슭자락으로 이어져 있기 때문이다. 북쪽 봉우리(정상)에는 바위들이 박혀 있고, 서쪽으로 말굽형 화구를 이루고 있으며, 일부 사면에 삼나무와 해송이 조림되어 있고, 그외 지역은 풀밭을 이루고 있다.</p>
+                </div>
+
+        
+
+            </div>
+        </div>
+
+        <div class="conbox con2">
+            <div class="main1">
+                <div class="image">
+                    <img src="/img/gamsan.png">
+                </div>
+        
+                <div class="text">
+                    <h1>감산우리가등</h1>
+                    <p>일주도로 도로변에 위치한 우리가든은 일반 한정식, 옥돔구이 등을 비롯해 갈비, 목살, 삼겹살 등 육류도 판매한다. 인심만큼 푸짐한 밥상이 차려져 나오는 정식, 돼지고기의 쫀득함과 아삭한 콩나물의 조화가 입맛을 돋우는 두루치기도 좋다.</p>
+                </div>
+            </div>
+        
+        
+            <div class="main2">
+                <div class="image">
+                    <img src="/img/gorae.png">
+                </div>
+        
+                <div class="text">
+                    <h1>고래라면</h1>
+                    <p>제주의 동쪽, 김영갑 갤러리 인근에 위치한 고래라면의 분점인 이 곳 신화역사점은 본점과 마찬가지로 다양한 해산물을 사용한 라면요리를 선보인다. 메뉴로는 통통한 문어가 들어간 문어라면과 성게로 국물맛을 낸 성게라면, 다양한 해물이 들어간 해물라면, 바지락으로 맛을 낸 해물바지락 칼국수가 있다. 여기에 새우만두로 더욱 풍성한 한상을 즐길 수 있으며 계절별미로 새우장 덮밥, 전복물회, 전복뚝배기, 전복죽을 준비해 놓고 있다.</p>
+                </div>
+            </div>
+        
+            <div class="main3">
+                <div class="image">
+                    <img src="/img/sanbangsan.png">
+                </div>
+        
+                <div class="text">
+                    <h1>산방산초가집</h1>
+                    <p>산방산에 갔다가 꼭 들어야 할 맛집이다. 가장 잘 나가는 메뉴는 단연 전복해물전골. 이렇게 전복이 푸짐하게 올라간 해물전골을 본 적이 있을까 싶을 정도이다.
+                        다양한 해산물을 맛보는 건 당연, 몸보신도 제대로 하고 싶다면 추천하는 메뉴이다. 전복해물전골을 주문하면 서비스로 맛있는 고등어구이도 나온다. </p>
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="conbox con3">
+            <div class="main1">
+                <div class="image">
+                    <img src="/img/thecobe.png">
+                </div>
+        
+                <div class="text">
+                    <h1>더코브</h1>
+                    <p>더 코브는 트렌디함 가득 묻어나는 분위기 속에서 매일 아침 구워내는 신선한 페이스트리와 향긋한 커피를 함께 즐길 수 있는 베이커리 카페다. 합리적인 가격으로 더욱 사랑받고 있다.</p>
+                </div>
+            </div>
+        
+        
+            <div class="main2">
+                <div class="image">
+                    <img src="/img/goodam.png">
+                </div>
+        
+                <div class="text">
+                    <h1>구닮카페</h1>
+                    <p>산방산 바로 앞에 위치한 구닮은 유채꽃밭과 바다가 보이는 전망 좋은 카페이다.
+                        구닮스무디와 솜사탕아포가토가 대표메뉴로는 구닮스무디와 솜사탕아포가토로 이색적이고 유니크한 비주얼로 인기가 많다.
+                        케이크, 샌드위치 등 다양한 디저트 메뉴도 있고, 카페 한 켠에 제주 기념품도 판매하고 있다.</p>
+                </div>
+            </div>
+        
+            <div class="main3">
+                <div class="image">
+                    <img src="/img/wend.png">
+                </div>
+        
+                <div class="text">
+                    <h1>웬드구니</h1>
+                    <p>일리원두로 만든 커피와 직접구운 베이커리를 맛볼 수 있는 카페입니다.
+                        '웬드구니'는 아프리카 부르키나파소 토속언어로 '신의선물'이라는 뜻입니다.
+                        여름에는 직접 끓여 만든 팥으로 만든 팥빙수도 판매하고 있습니다.</p>
+        
+        </div>
+    </div>
+
+</body>
+</html>

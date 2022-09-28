@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a4ab028ddc.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Gamja+Flower&family=Gugi&family=Jua&family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/reviewupdate.css"/>
+    <title>Review update</title>
+</head>
+
+<body>
+<div class="menu">
+  <input type="checkbox" id="menuicon">
+  <label for="menuicon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <div class="sidebar">
+    <div class="logo">
+      <i class="fa-solid fa-ferry"></i>
+      <p>&nbsp; JeJu Island</p>
+    </div><hr>
+
+    <ul class="mainmenu">
+      <li class="item" id="account">
+        <a href="#account" class="btn">Place</a>
+        <div class="subMenu">
+          <a th:href="@{/menu/hanla}">한라산</a>
+          <a th:href="@{/menu/seongsanbong}">성산일출봉</a>
+          <a th:href="@{/menu/chunji}">천지연폭포</a>
+          <a th:href="@{/menu/hyupjae}">협재해수욕장</a>
+          <a th:href="@{/menu/osulok}">오셜록</a>
+          <a th:href="@{/menu/woodo}">우도</a>
+        </div>
+      </li>
+
+      <li class="item">
+        <a th:href="@{/review/list}" class="btn">Review</a>
+      </li>
+
+      <li class="item" id="my">
+        <a href="#" class="btn">MyInfo</a>
+        <div class="subMenu">
+          <a href="#">내가 쓴 리뷰</a>
+          <a href="#">회원 탈퇴</a>
+        </div>
+      </li>
+    </ul>
+    <label for="menuicon"></label>
+
+    <button type="button" class="logout" th:onClick="|location.href='@{/user/logout}'|">로그아웃</button>
+  </div>
+
+  <div class="header">
+    <a th:href="@{/review/list}"><i class="fa-solid fa-house-user"></i></a>
+    <h1>R E V I E W</h1>
+  </div>
+</div><hr>
+
+<main role="main" class="container">
+
+  <div class="title">리뷰 수정</div>
+  <div class="register">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+    <form role="update-form" th:action="@{/review/post/edit/}" method="post">
+      <input type="hidden" name="_method" value="put"/>
+<!--      <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />-->
+      <input type="hidden" name="id" th:value="${reviewsDTO.id}"/>
+
+
+      <div class="maintb">
+        <div class="table1">
+          <p>제&nbsp;&nbsp;목 : </p>
+          <input type="text" name="revTitles" th:value="${reviewsDTO.revTitles}">
+        </div><hr>
+
+        <div class="table1">
+          <p>작성자 : </p>
+          <input type="text" name="nickNames" th:value="${reviewsDTO.nickNames}">
+        </div><hr>
+
+        <div class="table">
+          <p>여행테마 : </p>
+          <input type="text" name="tags" th:value="${reviewsDTO.tags}">
+        </div><hr>
+
+        <div class="table1">
+          <p>여행지 : </p>
+          <input type="text" name="places" th:value="${reviewsDTO.places}">
+        </div><hr>
+
+        <div class="table2">
+          <p>내&nbsp;&nbsp;용 : </p>
+          <input type="text" name="contents" th:value="${reviewsDTO.contents}">
+        </div>
+
+
+        <div>
+          <button type="submit" >수정</button>
+        </div>
+
+
+      </div>
+
+    </form>
+
+    <button ><a th:href="@{'/review/post/' + ${reviewsDTO.id}}"> 취소</a></button>
+
+  </div>
+</main>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>-->
+</body>
+</html>

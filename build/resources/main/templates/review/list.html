@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/a4ab028ddc.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Gamja+Flower&family=Gugi&family=Jua&family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/review.css"/>
+  <title>Review</title>
+
+  <script>
+        function toggleD(obj) {
+            if (obj.style.display == 'none')
+            obj.style.display = '';
+            else
+            obj.style.display = 'none';
+            }
+  </script>
+
+<!--<head th:replace="fragments/common :: head('게시판입니다.')">-->
+<!--  &lt;!&ndash; @{...}는 타임리프의 기본 링크 표현 구문 &ndash;&gt;-->
+<!--  &lt;!&ndash; Required meta tags &ndash;&gt;-->
+<!--  <meta charset="utf-8" />-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>-->
+
+  <!-- Bootstrap CSS -->
+<!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"-->
+<!--        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />-->
+<!--  <link href="css/starter-template.css" rel="stylesheet"/>-->
+
+</head>
+
+<body>
+  <div class="menu">
+    <input type="checkbox" id="menuicon">
+    <label for="menuicon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <div class="sidebar">
+      <div class="logo">
+        <i class="fa-solid fa-ferry"></i>
+        <p>&nbsp; JeJu Island</p>
+      </div><hr>
+
+      <ul class="mainmenu">
+        <li class="item" id="account">
+          <a href="#account" class="btn">Place</a>
+          <div class="subMenu">
+            <a th:href="@{/menu/hanla}">한라산</a>
+            <a th:href="@{/menu/seongsanbong}">성산일출봉</a>
+            <a th:href="@{/menu/chunji}">천지연폭포</a>
+            <a th:href="@{/menu/hyupjae}">협재해수욕장</a>
+            <a th:href="@{/menu/osulok}">오셜록</a>
+            <a th:href="@{/menu/woodo}">우도</a>
+          </div>
+        </li>
+
+        <li class="item">
+          <a th:href="@{/review/list}" class="btn">Review</a>
+        </li>
+
+        <li class="item" id="my">
+          <a href="#" class="btn">MyInfo</a>
+          <div class="subMenu">
+            <a href="#">내가 쓴 리뷰</a>
+            <a href="#">회원 탈퇴</a>
+          </div>
+        </li>
+      </ul>
+      <label for="menuicon"></label>
+
+      <button type="button" class="logout" th:onClick="|location.href='@{/user/logout}'|">로그아웃</button>
+    </div>
+
+    <div class="header">
+      <a th:href="@{/}"><i class="fa-solid fa-house-user"></i></a>
+      <h1>R E V I E W</h1>
+    </div>
+  </div><hr>
+
+  <div class="box">
+    <a sec:authorize="hasRole('ROLE_MEMBER')" th:href="@{/review/post}">리뷰쓰러가기</a>
+  </div>
+
+  <form action="/review/search" method="GET">
+      <div class="search">
+        검색 : <input name="tags" type="text" placeholder="검색어를 입력해주세요.">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+  </form>
+
+
+
+
+<!--    검색 : <input type="search">-->
+<!--    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>-->
+<!--  </div>-->
+
+  <div class="text1">
+    <div class="review1" th:each="reviews : ${reviewsList}">
+      <a style='cursor:hand' onclick=toggleD(div1);><img src="/img/review1.png"/></a>
+      <h5>&lt;천지연폭포&gt;</h5>
+      번호 : <a th:text="${reviews.id}"></a><br>
+      작성내용 : <a th:href="'/review/post/'+${reviews.id}" th:text="${reviews.revTitles}"></a><br>
+      작성자 : <a th:text="${reviews.nickNames}"></a>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <!--<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:replace="fragments/common :: menu('home')"></nav>-->
+  <!--<br><br><br><br>-->
+  <!--<main role="main" class="container">-->
+  <!--  <div class="starter-template">-->
+
+  <!--    <table class="table table-bordered">-->
+  <!--      &lt;!&ndash; CONTENTS !&ndash;&gt;-->
+  <!--      <thead>-->
+  <!--      <tr>-->
+  <!--        <th class="col-md-1">번호</th>-->
+  <!--        <th class="col-md-4">글제목</th>-->
+  <!--        <th class="col-md-3">작성자</th>-->
+  <!--      </tr>-->
+  <!--      </thead>-->
+
+  <!--      <tbody>-->
+  <!--      &lt;!&ndash; CONTENTS !&ndash;&gt;-->
+  <!--      <tr th:each="reviews : ${reviewsList}">-->
+  <!--        <td th:text="${reviews.id}"></td>-->
+  <!--        <td><a th:href="'/review/post/'+${reviews.id}" th:text="${reviews.revTitles}"></a></td>-->
+  <!--        <td th:text="${reviews.nickNames}"></td>-->
+
+  <!--      </tr>-->
+  <!--      </tbody>-->
+  <!--    </table>-->
+      <!-- Pagination -->
+      <div class="footer">
+
+          <span th:each="pageNum : ${pageList}" th:inline="text">
+            <a th:href="@{'/review/list/?page=' + ${pageNum}}"> [[${pageNum}]]</a>
+          </span>
+
+      </div>
+
+      <!-- 검색 form -->
+<!--      <form action="/review/search" method="GET">-->
+<!--        <div>-->
+<!--          <input name="tags" type="text" placeholder="검색어를 입력해주세요.">-->
+<!--          <button class="btn btn-primary">검색하기</button>-->
+<!--        </div>-->
+
+<!--      </form>-->
+
+<!--    </div>-->
+  <!--</main>-->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

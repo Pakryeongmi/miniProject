@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a4ab028ddc.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Gugi&family=Jua&family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/woodo.css">
+    <title>천지연폭포</title>
+</head>
+<body>
+    <div class="menu">
+        <input type="checkbox" id="menuicon">
+        <label for="menuicon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-ferry"></i>
+                <p>&nbsp; JeJu Island</p>
+            </div><hr>
+
+            <ul class="mainmenu">
+                <li class="item" id="account">
+                    <a href="#account" class="btn">Place</a>
+                    <div class="subMenu">
+                        <a th:href="@{/menu/hanla}">한라산</a>
+                        <a th:href="@{/menu/seongsanbong}">성산일출봉</a>
+                        <a th:href="@{/menu/chunji}">천지연폭포</a>
+                        <a th:href="@{/menu/hyupjae}">협재해수욕장</a>
+                        <a th:href="@{/menu/osulok}">오셜록</a>
+                        <a th:href="@{/menu/woodo}">우도</a>
+                    </div>
+                </li>
+
+                <li class="item">
+                    <a th:href="@{/review/list}" class="btn">Review</a>
+                </li>
+
+                <li class="item" id="my">
+                    <a href="#my" class="btn">MyInfo</a>
+                    <div class="subMenu">
+                        <a href="#">내가 쓴 리뷰</a>                        
+                        <a href="#">회원 탈퇴</a>
+                    </div>
+                </li>
+            </ul>
+            <label for="menuicon"></label>
+
+            <button type="button" class="logout" th:onClick="|location.href='@{/user/logout}'|">로그아웃</button>
+        </div>
+
+        <div class="icon">
+            <a th:href="@{'/'}"><i class="fa-solid fa-house-user"></i></a>
+        </div>
+    </div>
+
+
+    <div class="head">
+        <div class="image">
+            <img src="/img/chunjimain.png">
+        </div>
+
+        <div class="text">
+        <h1>천지연폭포</h1>
+        <p>서귀포는 다른 지역에 비해 용천수가 많이 솟고, 지하 층에 물이 잘 스며들지 않는 수성응회암이 널리 분포하여 다른 지역보다 상대적으로 폭포가 많다. 그런 서귀포 폭포 중에서도 규모나 경관 면에서 단연 으뜸으로 관광객의 발길이 머무는 곳이 있으니, 천지연 폭포가 바로 그곳이다. 천지연은 하늘과 땅이 만나 이루어진 연못이라는 의미를 담고 있는데, 폭포의 길이 22m, 그 아래 못의 깊이가 20m로, 가히 하늘과 땅이 만나는 연못이라 불린다. </p>
+        </div>
+    </div><hr>
+
+
+    <div class="tab_content">
+        <input type="radio" name="tabmenu" id="tab01" checked>
+        <label for="tab01">TRIP</label>
+        <input type="radio" name="tabmenu" id="tab02">
+        <label for="tab02">FOOD</label>
+        <input type="radio" name="tabmenu" id="tab03">
+        <label for="tab03">CAFE</label>
+
+        
+        <div class="conbox con1">
+            <div class="main1">
+                <div class="image">
+                    <img src="/img/temple.png">
+                </div>
+        
+                <div class="text">
+                    <h1>법정사</h1>
+                    <p>3·1운동이 항일투쟁의 시작으로 알려져 있으나, 1918년 10월 ‘법정사항일운동’이 사실상 먼저였다.
+                        서귀포 법정사 승려들은 민간인과 함께 조직적인 항일운동을 계획해 투쟁을 일으켰고, 2일간의 항거 끝에 결국 일제에 의해 제압되었다.
+                        법정사는 한라산 동백길 안내소에 못 미치는 곳에 위치한 ‘무오법정사항일운동발상지’ 안내판 옆 샛길로 들어가면 그 모습을 드러낸다.
+                        그러나 일제에 의해 불태워져 현재는 건물 흔적만 남아있다.</p>
+                </div>
+            </div>
+        
+        
+            <div class="main2">
+                <div class="image">
+                    <img src="/img/art.png">
+                </div>
+        
+                <div class="text">
+                    <h1>걸매예술마을</h1>
+                    <p>걸매 생태공원 동쪽 절벽 위에 위치한 걸매 예술마을은 2007년 서귀포 공공미술 프로젝트를 통해 형성되었다.
+                        주변 자연과 어우러진 그림이 곳곳에 그려져 있으며 ‘풍경이 있는 오솔길’로 불리기도 한다. </p>
+                </div>
+            </div>
+        
+            <div class="main3">
+                <div class="image">
+                    <img src="/img/sammaebong.png">
+                </div>
+        
+                <div class="text">
+                    <h1>삼매봉</h1>
+                    <p>제주올레 6코스의 종점이자 7코스의 시작점인 서귀포 외돌개 앞에 위치한 작은 오름 삼매봉은 시민공원으로 지역 주민들이 많이 찾는 곳이다. 삼매봉 주변으로는 오름을 한 바퀴 돌아 정상으로 갈 수 있는 1.2㎞길이의 산책길이 나있다. 작은 오름이라 힘들이지 않고 올라갈 수 있으며 서귀포 앞바다에 아름답게 떠있는 범섬, 문섬, 새섬, 섶섬 그리고 서쪽으로는 마라도와 가파도까지 한눈에 바라볼 수가 있다.</p>
+                </div>
+
+        
+
+            </div>
+        </div>
+
+        <div class="conbox con2">
+            <div class="main1">
+                <div class="image">
+                    <img src="/img/joeun.png">
+                </div>
+        
+                <div class="text">
+                    <h1>이조은식당</h1>
+                    <p>제주의 향토음식 전문점인 이조은식당은 중문관광단지와 자동차로 1분 거리에 위치해 있다.
+                        제주도 음식 중 하나인 갈치를 메인으로 한 갈치정식을 주문하면 갈치 회, 갈치조림, 갈치구이가 나온다.</p>
+                </div>
+            </div>
+        
+        
+            <div class="main2">
+                <div class="image">
+                    <img src="/img/mero.png">
+                </div>
+        
+                <div class="text">
+                    <h1>메로식당</h1>
+                    <p>메로식당은 2014년 호텔신라의 레시피 전수와 리모델링 지원을 통해 재개장한 ‘맛있는 제주만들기’ 3호점 식당이다. 메로구이, 메로탕면, 메로조림 등 식당에서 선보이는 5가지 메뉴들은 모두 메로로 승부수를 건다. 고소하면서도 달달한 맛뿐 아니라 그 효능까지 우수해 고급 생선으로 일컬어지는 메로의 맛을 제대로 음미해볼 수 있는 장소다. </p>
+                </div>
+            </div>
+        
+            <div class="main3">
+                <div class="image">
+                    <img src="/img/unhae.png">
+                </div>
+        
+                <div class="text">
+                    <h1>운해횟집</h1>
+                    <p>포구 앞 수심10미터에서 끌어올린 청정수를 24시간 흘려보내는 유수식 수족관에서 관리한 신선한 횟감,
+                        제주산 생해물로 구성된 푸짐한 밑반찬, 황게게장에서 초장, 김치까지 직접 담근 정성이 가득한 음식을 제공한다. </p>
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="conbox con3">
+            <div class="main1">
+                <div class="image">
+                    <img src="/img/somban.png">
+                </div>
+        
+                <div class="text">
+                    <h1>솜반내풍경</h1>
+                    <p>서홍동 솜반내에 위치한 마을카페.
+                        천지연 폭포로 흘러가는 시원한 물살을 보며 음료를 마실 수 있다.
+                        착한 가격과 건강한 맛이 특징인 마을 주민들의 사랑방이자 피서지 속 착한 카페.</p>
+                </div>
+            </div>
+        
+        
+            <div class="main2">
+                <div class="image">
+                    <img src="/img/bluehouse.png">
+                </div>
+        
+                <div class="text">
+                    <h1>블루하우스</h1>
+                    <p>서귀포 올레시장 근처에 위치하 카페 블루하우스. 이름처럼 파란 원색으로 페인팅된 외관과, 원색은 거의 없이 빈티지하게 설계된 내부가 인상적이다. 홍콩의 이미지를 차용했다고 하는데, 컨셉에 무색하지 않게 시그니처 메뉴도 홍콩 밀크티다. 주인이 직접 구운 치즈타르트, 브라우니 등의 디저트도 판매하는데, 커피나 밀크티에 곁들이면 좋다. 매달 첫째주에는 플리마켓도 열리니, 방문하기전 미리 일정을 확인하면 좋을 듯 하다. </p>
+                </div>
+            </div>
+        
+            <div class="main3">
+                <div class="image">
+                    <img src="/img/banong.png">
+                </div>
+        
+                <div class="text">
+                    <h1>바농</h1>
+                    <p>바농카페는 이중섭미술관 북쪽 이중섭거리에 위치하고 있다.
+                        이곳에서는 제주올레의 마스코트인 말모양 간세인형을 직접 만들어보는 체험을 할수 있다.
+                        체험을 하면 음료 한잔 무료로 제공된다.
+                        마농의 특별메뉴로는 유기농영귤차와 에소밀크티, 봉자주스 등이 있다.</p>
+        
+        </div>
+    </div>
+
+</body>
+</html>

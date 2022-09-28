@@ -1,0 +1,48 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin-top:5%;
+  }
+
+
+.header img {
+    display:block;
+    margin:auto;
+    width:600px;
+    height:300px;
+    margin-bottom:50px;
+}
+
+.main {
+      width: 300px;
+      height: 200px;
+      display:block;
+      margin:auto;
+      border:solid 3px;
+      border-radius:20px;
+      padding-left:30px;
+      padding-right:30px;
+      padding-top:30px;
+      padding-bottom:20px;
+      border-color: lightgray;
+}
+
+
+.main input {
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 20px
+  }
+
+.main button {
+    width: 200px;
+    height: 30px;
+    display:block;
+    margin:auto;
+  }
+
+#map {
+    display:block;
+    margin:auto;
+  }

@@ -1,0 +1,135 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin-right: 3%;
+    margin-top: 3%;
+    margin-bottom: 5%;
+  }
+
+.header {
+    height: 200px;
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Kdam Thmor Pro';
+  }
+
+.main1 {
+    margin-bottom:0;
+}
+
+.main2 {
+    height: 550px;
+    width:700px;
+    background-image:url('/img/map.png');
+    margin:0 auto;
+    background-repeat: no-repeat;
+    margin-bottom:20px;
+  }
+
+.main1 #air {
+    width:110px;
+    height:90px;
+    margin-left:600px;
+}
+
+.main2 #dol {
+    width:40px;
+    height:70px;
+    float:right;
+    margin-right:10px;
+}
+
+.main2 #hab {
+    width:100px;
+    height:60px;
+    margin-top:100px;
+    margin-left:10px;
+}
+
+.main2 #hanlasan {
+    width:100px;
+    height:70px;
+    margin-top: 100px;
+    margin-left: 200px;
+}
+
+.main2 #bong {
+    width:80px;
+    height:70px;
+    float:right;
+    margin-top: 200px;
+}
+
+.main2 #chunji {
+    width:100px;
+    height:70px;
+    float:right;
+    margin-top: 220px;
+    margin-right: 100px;
+}
+
+.main2 #osulok {
+    width:100px;
+    height:70px;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+
+
+.main1 a img {
+    transform:scale(1.4);
+    transition:.3s;
+}
+
+.main1 a:hover img {
+    transform: scale(1.8);
+}
+
+.main2 a img {
+    transform:scale(1);
+    transition:.3s;
+}
+
+.main2 a:hover img {
+    transform: scale(1.4);
+}
+
+
+
+
+.footer {
+    width: 30px;
+    justify-items: center;
+    font-size: 70px;
+    margin-left: 320px;
+  }
+
+.icons {
+    display: flex;
+  }
+
+.icons i {
+    padding: 0px 110px;
+    padding-bottom: 0px;
+    color: dimgray;
+  }
+
+.icons p {
+    font-size: 40px;
+  }
+
+.footer .text {
+    display: flex;
+    font-size: 40px;
+  }
+
+.footer .text a {
+    display: flex;
+    color: dimgray;
+    padding: 0px 85px;
+    text-decoration-line: none;
+    font-family: 'Jua';
+
+  }

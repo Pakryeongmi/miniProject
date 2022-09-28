@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a4ab028ddc.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Gugi&family=Jua&family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/woodo.css">
+    <title>우도</title>
+</head>
+<body>
+    <div class="menu">
+        <input type="checkbox" id="menuicon">
+        <label for="menuicon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-ferry"></i>
+                <p>&nbsp; JeJu Island</p>
+            </div><hr>
+
+            <ul class="mainmenu">
+                <li class="item" id="account">
+                    <a href="#account" class="btn">Place</a>
+                    <div class="subMenu">
+                        <a th:href="@{/menu/hanla}">한라산</a>
+                        <a th:href="@{/menu/seongsanbong}">성산일출봉</a>
+                        <a th:href="@{/menu/chunji}">천지연폭포</a>
+                        <a th:href="@{/menu/hyupjae}">협재해수욕장</a>
+                        <a th:href="@{/menu/osulok}">오셜록</a>
+                        <a th:href="@{/menu/woodo}">우도</a>
+                    </div>
+                </li>
+
+                <li class="item">
+                    <a th:href="@{/review/list}" class="btn">Review</a>
+                </li>
+
+                <li class="item" id="my">
+                    <a href="#my" class="btn">MyInfo</a>
+                    <div class="subMenu">
+                        <a href="#">내가 쓴 리뷰</a>                        
+                        <a href="#">회원 탈퇴</a>
+                    </div>
+                </li>
+            </ul>
+            <label for="menuicon"></label>
+
+            <button type="button" class="logout" th:onClick="|location.href='@{/user/logout}'|">로그아웃</button>
+        </div>
+
+        <div class="icon">
+            <a th:href="@{'/'}"><i class="fa-solid fa-house-user"></i></a>
+        </div>
+    </div>
+
+
+    <div class="head">
+        <div class="image">
+            <img src="/img/woo.png">
+        </div>
+
+        <div class="text">
+        <h1>우도</h1>
+        <p>우도는 소가 누워있는 모양을 닮았다고 해서 일찍부터 소섬 또는 쉐섬으로 불리웠다. 완만한 경사와 옥토, 풍부한 어장, 우도팔경 등 천혜의 자연조건을 갖춘 관광지로써 한해 약 200만 명의 관광객이 찾는 제주의 대표적인 부속섬이다. </p>
+        </div>
+    </div><hr>
+
+
+    <div class="tab_content">
+        <input type="radio" name="tabmenu" id="tab01" checked>
+        <label for="tab01">TRIP</label>
+        <input type="radio" name="tabmenu" id="tab02">
+        <label for="tab02">FOOD</label>
+        <input type="radio" name="tabmenu" id="tab03">
+        <label for="tab03">CAFE</label>
+
+        
+        <div class="conbox con1">
+            <div class="main1">
+                <div class="image">
+                    <img src="/img/bong.png">
+                </div>
+        
+                <div class="text">
+                    <h1>우도봉</h1>
+                    <p>제주시 구좌읍 종달리에서 약 2Km, 서귀포시 성산항에서 약 3.8Km 떨어진 북제주군 우도(소섬)는 유인도로 소가 머리를 들고 누워있는 형태를 띠고 있는데, 머리에 해당하는 부분을 쇠머리오름이라 하며 우도사람들은 '섬머리'로 통한다.</p>
+                </div>
+            </div>
+        
+        
+            <div class="main2">
+                <div class="image">
+                    <img src="/img/gum1.png">
+                </div>
+        
+                <div class="text">
+                    <h1>검멀레해변</h1>
+                    <p>검멀레 해수욕장은 우도봉 아래에 협곡 속에 숨어있다. 폭 1백 여 미터의 작은 해변이지만 모래 찜질을 겸한 해수욕을 할 수 있는 장소이다. 도로에서 해변은 계단으로 연결되어 있다. 검멀레의 '검'은 '검다', '멀레'는 '모래'라는 뜻으로, 검은 모래 해변을 뜻한다. </p>
+                </div>
+            </div>
+        
+            <div class="main3">
+                <div class="image">
+                    <img src="/img/gum2.png">
+                </div>
+        
+                <div class="text">
+                    <h1>검멀레동굴</h1>
+                    <p>검멀레해변 끄트머리 절벽 아래에는 콧구멍이라고도 하는 동굴이 커다랗게 열려 있다. 썰물이 되었을 때, 해수욕장 끝에 자리 잡은 동굴 안으로 들어갈 수 있다.</p>
+                </div>
+            </div>
+        
+            <div class="main4">
+                <div class="image">
+                    <img src="/img/bin.png">
+                </div>
+        
+                <div class="text">
+                    <h1>서빈백사해변</h1>
+                    <p>에메랄드빛으로 부서지는 햇살 아래 하얗다 못해 푸른빛이 감도는 서빈백사해변. 우도 서쪽의 하얀모래해변이라 하여 서빈백사로 불린다.</p>
+                </div>
+            </div>
+        
+            <div class="main5">
+                <div class="image">
+                    <img src="/img/ha.png">
+                </div>
+        
+                <div class="text">
+                    <h1>하고수동해변</h1>
+                    <p>모래가 부드럽고 수심이 얕아 가족 단위 해수욕을 즐기기에 안성맞춤이다. 수심이 얕아 어린이를 동반한 가족 단위 피서객이 이용하기에 좋다. 70여세 해녀를 모티브로 한 해녀상이 중앙에 있어 눈길을 끈다.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="conbox con2">
+            <div class="main1">
+                <div class="image">
+                    <img src="/img/hahahoho.png">
+                </div>
+        
+                <div class="text">
+                    <h1>하하호호</h1>
+                    <p>두툼한 흑돼지 패티위에 우도 땅콩이나 마늘칩이 뿌린 수제버거가 대표적인 메뉴로 성인남자가 배부를 정도인 1.5인분의 양이다.
+                        인기메뉴인 제주딱새우버거는 매일 소량만 준비하여 못먹고 오는 경우도 있을 정도다.
+                        땅콩아이스크림과 마늘아이스크림도 인기가 많다.</p>
+                </div>
+            </div>
+        
+        
+            <div class="main2">
+                <div class="image">
+                    <img src="/img/sumsonai.png">
+                </div>
+        
+                <div class="text">
+                    <h1>섬소나이</h1>
+                    <p>우도에 위치한 섬소나이는 짬뽕과 피자를 즐길 수 있는 작고 예쁜 식당이다. 메뉴는 간단하다. 짬뽕 세 종류와 피자 두 종류 총 다섯가지다. 이 집 짬뽕 맛의 비결은 한약재 등 10가지 이상의 재료를 사용하여 12시간 동안 푹 끓여낸 육수에서 나온다. 톳을 사용해 면을 만들고 모자반(몸)을 넣어 우도의 맛을 살렸다. </p>
+                </div>
+            </div>
+        
+            <div class="main3">
+                <div class="image">
+                    <img src="/img/sandolong.png">
+                </div>
+        
+                <div class="text">
+                    <h1>산도롱맨도롱</h1>
+                    <p>하루종일 진하게 달이는 제주산 사골육수를 베이스로한 고기국수와 제주산 생갈비가 토핑으로 올라간 얼큰칼칼 매콤한 갈비국수를 제공한다. 진득하고 깊은 맛의 국물은 숙취 해소를 위한 해장용 식사로도 제격이다. </p>
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="conbox con3">
+            <div class="main1">
+                <div class="image">
+                    <img src="/img/blanc.png">
+                </div>
+        
+                <div class="text">
+                    <h1>블랑로쉐</h1>
+                    <p>우도 하고수동 해변가에 위치한 카페다. 안에서 파랗게 빛나는 하고수동 해변을 볼 수 있다.
+                        날이 좋으면 전면이 창으로된 한쪽 벽을 오픈해 시원한 바닷바람을 만끽하며 휴식을 취할 수 있다.
+                        상큼한 에이드와 여러 음료를 파는데 그중에서도 우도땅콩으로 만든 빙수와 크림라떼가 대표메뉴다.</p>
+                </div>
+            </div>
+        
+        
+            <div class="main2">
+                <div class="image">
+                    <img src="/img/jimis.png">
+                </div>
+        
+                <div class="text">
+                    <h1>지미스</h1>
+                    <p>지미가 직접 만든 원조 수제 아이스크림이라는 문구가 걸려있는 지미스. 우도땅콩을 갈아 만든 우도땅콩아이스크림이 유명하다. 
+                        바로 앞에 검멀레해변이 보이는 테이블이 있고, 한라봉&천혜향 샤베트도 판매한다.</p>
+                </div>
+            </div>
+        
+            <div class="main3">
+                <div class="image">
+                    <img src="/img/hi.png">
+                </div>
+        
+                <div class="text">
+                    <h1>안녕 육지사람들</h1>
+                    <p>빈티지한 공간에서 시원하고 푸른 바다를 바라보며 땅콩아이스크림을 먹으면 후회는 없을 것이다. 추천메뉴 중 하나인 흑돼지땅콩버거는 두꺼운 돼지고기 패티에 땅콩가루를 솔솔 뿌려서 인기가 많다. </p>
+        
+        </div>
+    </div>
+
+</body>
+</html>

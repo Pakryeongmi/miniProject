@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a4ab028ddc.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <title>첫페이지</title>
+</head>
+<body>
+<div class="header">
+    <h1>JeJu &nbsp; Island</h1>
+</div>
+
+<div class="main1">
+    <a th:href="@{/menu/woodo}"><img id="air" src="img/jejuair.png"></a>
+</div>
+
+<div class="main2">
+    <a th:href="@{/menu/woodo}"><img id="dol" src="img/dol.png"></a>
+    <a th:href="@{/menu/hyupjae}"><img id="hab" src="img/habjae.png"></a>
+    <a th:href="@{/menu/hanla}"><img id="hanlasan" src="img/hanlasan.png"></a>
+    <a th:href="@{/menu/seongsanbong}"><img id="bong" src="img/sunsanbong.png"></a>
+    <a th:href="@{/menu/chunji}"><img id="chunji" src="img/chunji.png"></a>
+    <a th:href="@{/menu/osulok}"><img id="osulok" src="img/osulok.png"></a>
+
+
+</div>
+
+
+<div class="footer">
+    <div class="icons">
+
+        <a sec:authorize="isAnonymous()" th:href="@{/review/list}"><i class="fa-brands fa-stack-exchange"></i></a>
+        <a sec:authorize="hasRole('ROLE_MEMBER')" th:href="@{/review/list}"><i class="fa-brands fa-stack-exchange"></i></a>
+        <a sec:authorize="isAnonymous()" th:href="@{/user/login}"><i class="fa-solid fa-right-to-bracket"></i></a>
+        <a sec:authorize="hasRole('ROLE_MEMBER')" th:href="@{/user/logout}"><i class="fa-solid fa-right-from-bracket"></i></a>
+        <a sec:authorize="isAnonymous()" th:href="@{/user/signup}"><i class="fa-solid fa-user-pen"></i></a>
+        <a sec:authorize="hasRole('ROLE_MEMBER')" th:href="@{/user/info}"><i class="fa-solid fa-circle-user"></i></a>
+
+    </div>
+
+    <div class="text">
+        <a sec:authorize="isAnonymous()" th:href="@{/review/reviewhome}">Review</a>
+        <a sec:authorize="hasRole('ROLE_MEMBER')" th:href="@{/review/reviewhome}">Review</a>
+        <a sec:authorize="isAnonymous()" th:href="@{/user/login}">Login</a>
+        <a sec:authorize="hasRole('ROLE_MEMBER')" th:href="@{/user/logout}">Logout</a>
+        <a sec:authorize="isAnonymous()" th:href="@{/user/signup}">Signup</a>
+        <a sec:authorize="hasRole('ROLE_MEMBER')" th:href="@{/user/info}">MyInfo</a>
+
+    </div>
+
+
+</div>
+</body>
+</html>

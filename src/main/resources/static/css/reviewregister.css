@@ -1,0 +1,310 @@
+body {
+    height: 100%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 3%;
+    margin-bottom: 5%;
+  }
+
+.menu {
+    font-family: 'Jua';
+}
+
+input[id="menuicon"] {
+    display: none;
+}
+
+input[id="menuicon"] + label {
+    display: block;
+    width: 40px;
+    height: 30px;
+    position: fixed;
+    right: 40px;
+    cursor: pointer;
+}
+
+input[id="menuicon"] + label span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    border-radius: 30px;
+    background: black;
+    transition: all .35s;
+}
+
+input[id="menuicon"]:checked + label {
+    z-index: 2;
+    right: -100px;
+}
+
+input[id="menuicon"] + label span:nth-child(1) {
+    top: 0;
+}
+
+input[id="menuicon"] + label span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+input[id="menuicon"] + label span:nth-child(3) {
+    bottom: 0;
+}
+
+div[class="sidebar"] {
+    width: 300px;
+    height: 100%;
+    background: #222;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    z-index: 1;
+    transition: all .35s;
+}
+
+input[id="menuicon"]:checked + label + div {
+    right: 0;
+}
+
+.sidebar .logo {
+    display: flex;
+    font-size: 37px;
+    color: white;
+    margin-left: 30px;
+}
+
+.sidebar .logo i {
+    margin-top: 40px;
+    font-size: 37px;
+}
+
+
+.sidebar hr {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.item {
+    border-top: 1px solid #ef584a;
+    overflow: hidden;
+}
+
+.btn {
+    display: block;
+    padding: 15px 20px;
+    background-color: #ff6f61;
+    color: #fff;
+    position: relative;
+}
+
+.btn:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid #ff6f61;
+    right: 15px;
+    bottom: -10px;
+    z-index: 9;
+}
+
+.btn i {
+    margin-right: 10px;
+}
+
+.subMenu{
+    background: #273057;
+    overflow: hidden;
+    transition: max-height 0.7s;
+    max-height: 0;
+}
+
+.subMenu a{
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    font-size: 14px;
+    border-bottom: 1px solid #394c7f;
+    position: relative;
+
+}
+
+.subMenu a:before{
+    content: '';
+    opacity: 0;
+    transition: opacity 0.3s;
+
+}
+
+.subMenu a:hover:before{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 8px;
+    left: 0;
+    top:0;
+    opacity: 1;
+    /* background-color: #d8d824; */
+    border-top: 24px solid transparent;
+    border-left: 11px solid #fcdc29;
+    border-bottom: 24px solid transparent;
+}
+
+.subMenu a:after{
+    content: '';
+    opacity: 0;
+    max-height: 8;
+    transition: opacity 0.3s;
+
+}
+
+.subMenu a:hover:after{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 6px;
+    right: 0px;
+    top:0;
+    opacity: 1;
+    /* background-color: #d8d824; */
+    border-top: 24px solid transparent;
+    border-right: 11px solid #fcdc29;
+    border-bottom: 24px solid transparent;
+}
+
+.subMenu a:hover{
+    background: #273057;
+    background: -moz-linear-gradient(top, #273057 0%, #273057 50%, #394c7f 51%, #394c7f 100%);
+    background: -webkit-linear-gradient(top, #273057 0%,#273057 50%,#394c7f 51%,#394c7f 100%);
+    background: linear-gradient(to bottom, #273057 0%,#273057 50%,#394c7f 51%,#394c7f 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#273057', endColorstr='#394c7f',GradientType=0 );
+    transition: all 0.3s;
+    border-bottom: 1px solid #394c7f;
+}
+
+.subMenu a:last-child{
+    border:none;
+}
+
+.item:target .subMenu{
+    max-height: 50em;
+}
+
+button {
+    margin-top: 25px;
+    margin-left: 200px;
+}
+
+.sidebar label[for*='menuicon'] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/*----------위에까지 메뉴 css------------*/
+
+.menu .header i {
+    font-size: 40px;
+    color:#222;
+}
+
+.title {
+    font-family:'Jua';
+    font-size:30px;
+    text-align:center;
+}
+
+.menu .header h1 {
+    text-align: center;
+    font-family: 'Jua';
+    font-size: 70px;
+    margin-bottom: 0;
+}
+
+.maintb {
+    width: 900px;
+    font-family: 'Jua';
+    margin: 0 auto;
+    border:solid;
+    border-radius:20px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:30px;
+    padding-bottom:20px;
+}
+
+.maintb p {
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+.title {
+    width: 950px;
+    margin: 0 auto;
+    background-color: lightgray;
+    taxt-align: center;
+    margin-top:50px;
+    margin-bottom:30px;
+    border:solid;
+    border-color: lightgray;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.table1 {
+    display: flex;
+    margin-left:50px;
+}
+
+.table1 input{
+    height:40px;
+    width:700px;
+    margin-left:30px;
+    margin-top:20px;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.table {
+    display: flex;
+    margin-left:50px;
+}
+
+.table select {
+    display: flex;
+    height:30px;
+    width:90px;
+    margin-left:30px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.table p {
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.table2 {
+    display: flex;
+    margin-left:50px;
+}
+
+.table2 input {
+    height: 300px;
+    width: 700px;
+    margin-left:30px;
+    margin-top:20px;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+#register button {
+    margin-left:620px;
+    width:130px;
+    height:40px;
+}
